@@ -1,18 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Noto+Serif+TC&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+        }
+    </style>
 </head>
+
 <body>
-    <section>
-        <div class="first_view">
-            <img src="./img/素材/logo.png" alt="logo">
-            <img src="./img/素材/hand.png" alt="hand">
+    <div class="top_img">
+        <img src="./img/素材/logo.png" alt="logo">
+        <img src="./img/素材/hand.png" alt="hand">
+        <img src="./img/素材/character01.png" alt="">
+        <img src="./img/bgimg/bg02.png" alt="">
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light " id="navbar">
+        <div class="container d-flex justify-content-center ">
+            <a class="navbar-brand" href="#"><img src="./img/素材/logo.png" alt="logo" width="60px"></a>
+            <!-- 漢堡條 -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
+                <ul class="navbar-nav justify-content-around">
+                    <li class="nav-item ">
+                        <img src="./img/素材/icon_news.svg" alt="logo_news"height="35px">
+                        <a class="nav-link" href="#">最新消息<br>News<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                            <img src="./img/素材/icon_sushiro.svg" alt="icon_sushi" width="28px">
+                        <a class="nav-link" href="#">關於我們<br>About</a>
+                    </li> 
+                    <li class="nav-item">
+                            <img src="./img/素材/icon_sushi.svg" alt="icon_sushi" height="35px">
+                        <a class="nav-link" href="#">美味壽司<br>Menu</a>
+                    </li>
+                    <li class="nav-item">
+                            <img src="./img/素材/icon_iphone.svg" alt="icon_iphone" height="35px">
+                        <a class="nav-link" href="#">媒體資訊<br>Media</a>
+                    </li>
+                    <li class="nav-item ">
+                            <img src="./img/素材/icon_location.svg" alt="icon_location" height="35px">
+                        <a class="nav-link" href="#">各地資訊<br>Location</a>
+                    </li>
+                </ul>
+            </div>
         </div>
+
+    </nav>
+    <section>
+        <div class="banner"></div>
     </section>
+    <section>
+        <div class="newsArea"></div>
+    </section>
+
+    <!-- 我是Javascript分隔線 -->
+    <script>
+        // NavBar sticky effect
+        window.onscroll = function () {
+            myFunction()
+        };
+
+        var navbar = document.getElementById("navbar");
+        var sticky = navbar.offsetTop;
+
+        function myFunction() {
+            
+            
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+               
+            } else {
+                navbar.classList.remove("sticky");
+               
+            }
+        }
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
 </body>
+
 </html>
