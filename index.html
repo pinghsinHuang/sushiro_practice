@@ -10,10 +10,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC|Noto+Serif+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <style>
         body {
+            background: #eee;
             margin: 0;
+            padding: 0;
         }
+
+       
     </style>
 </head>
 
@@ -36,23 +41,23 @@
             <div class="collapse navbar-collapse justify-content-around" id="navbarNav">
                 <ul class="navbar-nav justify-content-around">
                     <li class="nav-item ">
-                        <img src="./img/素材/icon_news.svg" alt="logo_news"height="35px">
+                        <img src="./img/素材/icon_news.svg" alt="logo_news" height="35px">
                         <a class="nav-link" href="#">最新消息<br>News<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                            <img src="./img/素材/icon_sushiro.svg" alt="icon_sushi" width="28px">
+                        <img src="./img/素材/icon_sushiro.svg" alt="icon_sushi" width="28px">
                         <a class="nav-link" href="#">關於我們<br>About</a>
-                    </li> 
+                    </li>
                     <li class="nav-item">
-                            <img src="./img/素材/icon_sushi.svg" alt="icon_sushi" height="35px">
+                        <img src="./img/素材/icon_sushi.svg" alt="icon_sushi" height="35px">
                         <a class="nav-link" href="#">美味壽司<br>Menu</a>
                     </li>
                     <li class="nav-item">
-                            <img src="./img/素材/icon_iphone.svg" alt="icon_iphone" height="35px">
+                        <img src="./img/素材/icon_iphone.svg" alt="icon_iphone" height="35px">
                         <a class="nav-link" href="#">媒體資訊<br>Media</a>
                     </li>
                     <li class="nav-item ">
-                            <img src="./img/素材/icon_location.svg" alt="icon_location" height="35px">
+                        <img src="./img/素材/icon_location.svg" alt="icon_location" height="35px">
                         <a class="nav-link" href="#">各地資訊<br>Location</a>
                     </li>
                 </ul>
@@ -61,7 +66,23 @@
 
     </nav>
     <section>
-        <div class="banner"></div>
+        <div class="banner" id="banner">
+            <!-- Swiper -->
+            <div class="swiper-container container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./img/bgimg/01.jpg" alt="" width="100%"></div>
+                    <div class="swiper-slide"><img src="./img/bgimg/02.jpg" alt="" width="100%"></div>
+                    <div class="swiper-slide"><img src="./img/bgimg/03.jpg" alt="" width="100%"></div>
+                    <div class="swiper-slide"><img src="./img/bgimg/04.jpg" alt="" width="100%"></div>
+                </div>
+               
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+             <!-- Add Pagination -->
+             <div class="swiper-pagination"></div>
+        </div>
     </section>
     <section>
         <div class="newsArea"></div>
@@ -78,19 +99,38 @@
         var sticky = navbar.offsetTop;
 
         function myFunction() {
-            
-            
+
+
             if (window.pageYOffset >= sticky) {
                 navbar.classList.add("sticky")
-               
+
             } else {
                 navbar.classList.remove("sticky");
-               
+
             }
         }
     </script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            // slidesPerView: 1,
+            // spaceBetween: 30,
+            loop: true,
 
-
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
     </script>
