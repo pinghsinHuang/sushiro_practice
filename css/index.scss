@@ -243,10 +243,11 @@ section {
 
 .box {width: 100%;height: 100vh;}
 
-.about_area {
+.aboutArea {
     width: 100%;
     height: 100vh;
     background-color: #EEE;
+    position: relative;
     h2{margin-bottom: 20px;}
     h4{
     letter-spacing: 1px;
@@ -273,5 +274,78 @@ section {
         flex-direction: column;
         justify-content: space-between;
     }
+    .charactor{
+        position: absolute;
+        left: 3%;
+        bottom: -100px;
+
+    }
+}
+.menuArea{
+    .menu_img {
+        margin: 100px auto 20px;
+        max-width: 1000px;
+        height: 450px;
+        background-color: rgb(241,89,66);
+    }
+     
+    .bg{
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .img1{
+        background-image: url(../img/bgimg/MENU01.jpg);
+        background-color: rgb(255,244,92);
+    }
+    .img2{
+        background-image: url(../img/bgimg/MENU02.jpg);
+        background-color: rgb(207,231,205);
+    }
+    .img3{
+        background-image: url(../img/bgimg/MENU03.jpg);
+        background-color: rgb(248,176,190);
+    }
+    .img4{
+        background-image: url(../img/bgimg/MENU04.jpg);
+        background-color: rgb(241,89,66);
+    }
+    .img5{
+        background-image: url(../img/bgimg/MENU05.jpg);
+        background-color: rgb(30,121,174);
+    }
+    .container {
+        width: 60%;
+       .row {
+        padding: 20px;
+        display: flex;
+        justify-content: space-around;
+        .btn {
+            width: 80px;
+            height: 80px;
+            background-color: #FFF;
+            border: #555 2px solid;
+            position: relative;
+            p{
+                width: 120px;
+                position: absolute;
+                bottom: -50px;
+                left:-20px;
+            }
+        }
+        .active{
+            border: $red 2px solid;
+            
+        }
+    }
+
+    }
+
+    
+
+   
+    
+    
+    
     
 }

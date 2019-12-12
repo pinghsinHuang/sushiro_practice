@@ -9,7 +9,8 @@
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,700|Noto+Serif+TC:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:400,500,700|Noto+Serif+TC:400,700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
     <style>
         body {
@@ -99,34 +100,62 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="bg_yellow"><img class="mid_img" src="./img/素材/character02.png" alt=""></div>
         </div>
         <div class="box"></div>
     </section>
     <section>
-        <div class="about_area">
-            
+        <div class="aboutArea">
+
             <div class="container">
-                    <h2>我們的信念</h2>
-                    <h4>讓每個人在壽司郎都能吃到讓胃和心靈皆得到滿足</h4>
+                <h2>我們的信念</h2>
+                <h4>讓每個人在壽司郎都能吃到讓胃和心靈皆得到滿足</h4>
                 <div class="row">
                     <div class="col-6 about_text">
-                            <h4>好吃的壽司郎</h4>
-                            <p>我們以驚喜的價格，讓所有顧客吃到高級美味的壽司</p>
-                            <hr>
-                            <h4>安心的壽司郎</h4>
-                            <p>我們嚴格把關食材，提供顧客安全新鮮的佳餚</p><hr>
-                            <h4>誠摯的壽司郎</h4>
-                            <p>我們用心的環境清潔以及誠摯以待的客戶服務</p>
+                        <h4>好吃的壽司郎</h4>
+                        <p>我們以驚喜的價格，讓所有顧客吃到高級美味的壽司</p>
+                        <hr>
+                        <h4>安心的壽司郎</h4>
+                        <p>我們嚴格把關食材，提供顧客安全新鮮的佳餚</p>
+                        <hr>
+                        <h4>誠摯的壽司郎</h4>
+                        <p>我們用心的環境清潔以及誠摯以待的客戶服務</p>
                     </div>
                     <div class="col-6"><img src="./img/bgimg/about_img.jpg" alt="" width="100%"></div>
                 </div>
             </div>
+            <div class="charactor"><img src="./img/素材/character03.png" alt="" width="200px"></div>
+        </div>
+    </section>
+    <section>
+        
+    </section>
+    <section>
+        <div class="menuArea">
+            <div id="menu_img" class="menu_img bg img1 ">
+                <!-- <div id="img1 bg" class="d-none"></div>
+                    <div id="img2 bg" class="d-none"></div>
+                    <div id="img3 bg" class="d-none"></div>
+                    <div id="img4 bg" class="d-none"></div>
+                    <div id="img5 bg" class="d-none"></div> -->
+            </div>
+            <div class="container"><div class="row">
+                <div class="btn b1 active"><p>握壽司</p></div>
+                <div class="btn b2"><p>高級握壽司</p></div>
+                <div class="btn b3"><p>軍艦</p></div>
+                <div class="btn b4"><p>副餐</p></div>
+                <div class="btn b5"><p>甜點‧飲料</p></div>
+            </div></div>
+            
+        </div>
         </div>
     </section>
 
     <!-- 我是Javascript分隔線 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
     <script>
         // NavBar sticky effect
         window.onscroll = function () {
@@ -147,6 +176,18 @@
 
             }
         }
+    </script>
+    <script>
+        $(".btn").click(function () {
+            $(".btn").removeClass('active')
+            $(this).addClass('active')
+
+            var index = $(this).index()
+            $('#menu_img').removeClass("img1 img2 img3 img4 img5");
+            $('#menu_img').addClass(`img${index+1}`);
+
+            // console.log(`img${index+1}`);
+        })
     </script>
     <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script>
@@ -169,9 +210,7 @@
             },
         });
     </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
     </script>
